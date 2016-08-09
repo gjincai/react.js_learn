@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello React!</title>
-    <script src="../build/react.min.js"></script>
-    <script src="../build/react-dom.min.js"></script>
-    <script src="../build/browser.min.js"></script>
-    <script src="index.js" type="text/babel"></script>
-    <style type="text/css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hello react.js</title>
+  <script src="../build/react.min.js"></script>
+  <script src="../build/react-dom.min.js"></script>
+  <script src="../build/browser.min.js"></script>
+  <!-- <script src="index.js" type="text/babel"></script> -->
+  <style type="text/css">
     .red{
       color: red;
     }
-    </style>
-  </head>
-  <body>
-    <div id="jc"></div>
-    <!-- <script type="text/babel">
-      ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('example')
-      );
-    </script> -->
-  </body>
+  </style>
+</head>
+<body>
+<div id="jc"></div>
+<script type="text/babel">
+  var Hello = React.createClass({
+    render:function(){
+      //1、行内样式
+      // return <span style={{color:'red'}}>hello {this.props.name}</span>;
+      //2、class样式
+      // return <span className='red'>hello {this.props.name}</span>;
+      //3、对象变量
+      var styleSpan = {
+        color: 'yellow',
+        fontSize: '30px',
+        fontWeight: 'bold'
+      }
+      return <span style={styleSpan}>hello {this.props.name}</span>;
+    }
+  });
+
+  ReactDOM.render(<Hello name='react'/>,document.getElementById('jc'));
+</script>
+</body>
 </html>
