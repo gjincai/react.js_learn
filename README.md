@@ -1,7 +1,7 @@
 # react.js_learn
 learn for react.js
 
-More relevant explanation, please move to: [http://gjincai.github.io/](http://gjincai.github.io/categories/react/)
+More relevant explanation, please move to: [http://gjincai.github.io/categories/react/](http://gjincai.github.io/categories/react/)
 
 ## 目 录
 
